@@ -11,7 +11,9 @@ public class MainScreen {
                 "1. Добавить дело\n" +
                 "2. Показать дела\n" +
                 "3. Удалить дело по номеру\n" +
-                "4. Удалить дело по названию\n");
+                "4. Удалить дело по названию\n" +
+                "5. Удалить по ключевому слову\n"
+        );
     }
 
     public void addMessage() {
@@ -32,5 +34,9 @@ public class MainScreen {
 
     public void deletNameMessage() {
         System.out.println("Введите задачу для удаления: ");
+    }
+
+    public void deleteKeyWord() {
+        System.out.println("Введите ключевое слово для удаления нескольких задач: ");
     }
 }

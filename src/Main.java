@@ -38,6 +38,9 @@ public class Main {
                        mainScreen.noTask();
                    }
                     break;
+                case "5":
+                    mainScreen.deleteKeyWord();
+                    taskList.deleteKeyWord(userInput.input());
             }
         }
         System.out.println("Программа завершена");

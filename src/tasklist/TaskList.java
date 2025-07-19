@@ -39,6 +39,9 @@ public class TaskList {
         }
         return  false;
     }
+
+    public boolean deleteKeyWord(String keyWord) {
+    }
 }
 
 //Должны быть операции:
