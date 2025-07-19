@@ -4,16 +4,16 @@ import userinterface.MainScreen;
 
 public class Main {
     public static void main(String[] args) {
-        UserInput userInput = new UserInput();
-        MainScreen mainScreen = new MainScreen();
-        TaskList taskList = new TaskList();
-        mainScreen.init();
-        boolean state = true;
+        UserInput userInput = new UserInput(); //ОБработка ввода
+        MainScreen mainScreen = new MainScreen(); //Методы вывода в консоль
+        TaskList taskList = new TaskList(); //Обратка списка задач
+        mainScreen.init(); // Вывод приветсвенного сообщения
+        boolean state = true; //Переменная для выхода из бесконечного цикла
         while (state) {
             mainScreen.showOptions();
             switch (userInput.input()) {
                 case "0":
-                    state = false;
+                    state = false; //Выход из программы и завершение работы
                     break;
                 case "1":
                     mainScreen.addMessage();
@@ -31,19 +31,23 @@ public class Main {
                     }
                     break;
                 case "4":
-                    mainScreen.deletNameMessage();
-                   if (taskList.deleteName(userInput.input())){
-                       mainScreen.deleted();
-                   } else {
-                       mainScreen.noTask();
-                   }
+                    mainScreen.deleteNameMessage();
+                    if (taskList.deleteName(userInput.input())) {
+                        mainScreen.deleted();
+                    } else {
+                        mainScreen.noTask();
+                    }
                     break;
                 case "5":
                     mainScreen.deleteKeyWord();
-                    taskList.deleteKeyWord(userInput.input());
+                    if (taskList.deleteKeyWord(userInput.input())) {
+                        mainScreen.deleted();
+                    } else {
+                        mainScreen.noTask();
+                    }
             }
         }
-        System.out.println("Программа завершена");
+        MainScreen.gameOver();
     }
 }
 
