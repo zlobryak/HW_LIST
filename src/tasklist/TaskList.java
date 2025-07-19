@@ -46,7 +46,7 @@ public class TaskList {
     public boolean deleteKeyWord(String keyWord) {
         List<String> temp = new ArrayList<>(); //Временный список для хранения всех задач на удаление
         for (String task : taskList) {  //Перебор всех задач в списке
-            if (task.toLowerCase().contains(keyWord)) {
+            if (task.toLowerCase().contains(keyWord.toLowerCase())) {
                 temp.add(task); //Добавление задач помеченных на удаление в временный список
             }
         }
