@@ -1,4 +1,36 @@
 package userinterface;
 
 public class MainScreen {
+    public void init() {
+        System.out.println("Приветствуем вас, Username!");
+    }
+
+    public void showOptions() {
+        System.out.print("\nВыберите операцию:\n\n" +
+                "0. Выход из программы\n" +
+                "1. Добавить дело\n" +
+                "2. Показать дела\n" +
+                "3. Удалить дело по номеру\n" +
+                "4. Удалить дело по названию\n");
+    }
+
+    public void addMessage() {
+        System.out.print("Введите название задачи: ");
+    }
+
+    public void deleteNumberMessage() {
+        System.out.println("Введите номер для удаления: ");
+    }
+
+    public void deleted() {
+        System.out.println("Удалено!");
+    }
+
+    public void noTask() {
+        System.out.println("Нет такой задачи!");
+    }
+
+    public void deletNameMessage() {
+        System.out.println("Введите задачу для удаления: ");
+    }
 }
