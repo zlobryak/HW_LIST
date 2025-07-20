@@ -23,11 +23,13 @@ public class TaskList {
 
 // Удалит задачу их списка по номеру
     public boolean deleteNumber(String taskNumber) {
+        int counter = 1;
         for (String task : taskList) {
-            if (taskList.indexOf(task) + 1 == Integer.parseInt(taskNumber)) {
+                        if (counter == Integer.parseInt(taskNumber)) {
                 taskList.remove(task);
                 return true;
             }
+                        counter += 1;
         }
         return false;
     }
