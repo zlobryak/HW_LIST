@@ -42,7 +42,11 @@ public class MainScreen {
         System.out.println("Введите ключевое слово для удаления нескольких задач: ");
     }
 
-    public static void gameOver() {
+    public void gameOver() {
         System.out.println("Программа завершена");
+    }
+
+    public void noSuchOption() {
+        System.out.println("Нет такой опции");
     }
 }

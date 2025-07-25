@@ -45,9 +45,11 @@ public class Main {
                     } else {
                         mainScreen.noTask();
                     }
+                default:
+                    mainScreen.noSuchOption();
             }
         }
-        MainScreen.gameOver();
+        mainScreen.gameOver();
     }
 }
 
